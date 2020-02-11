@@ -1,23 +1,23 @@
 # Neural Network
 
-環境初期設定
+Init env and update pip
 
 ```bash
-python3 -m venv venv # 環境生成
-pip install --upgrade pip # pipの更新
+python3 -m venv venv # init env
+pip install --upgrade pip # update pip
 ```
 
-環境保存と復元
+save and restore env
 
 ```bash
- pip freeze > requirements.txt # 保存
-pip install -r requirements.txt # 復元
+pip freeze > requirements.txt # save
+pip install -r requirements.txt # restore
 ```
 
-仮想環境のアクティブ化と非アクティブ化
+active and deactive env
 
 ```bash
-source venv/bin/activate #アクティブ化
-deactivate # 非アクティブ化
+source venv/bin/activate # active
+deactivate # deactive
 ```
 
