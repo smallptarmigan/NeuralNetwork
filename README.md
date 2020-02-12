@@ -1,6 +1,12 @@
 # Neural Network
 
+ニューラルネットワークプログラム
+
 Init env and update pip
+
+```bash
+sudo apt install python3-venv
+```
 
 ```bash
 python3 -m venv venv # init env
