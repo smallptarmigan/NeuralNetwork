@@ -15,6 +15,8 @@ def relu_f(x):
 def identify_f(x):
     return x
 
+#####################################
+
 def softmax(a):
     c = np.max(a)
     exp_a = np.exp(c - a)
@@ -22,4 +24,3 @@ def softmax(a):
     y = exp_a / sum_exp_a
     return y
 
-    
