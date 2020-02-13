@@ -5,25 +5,7 @@ import time
 import numpy as np
 import multiprocessing as mp
 
-def step_f(x):
-    y = x > 0
-    return y.astype(np.float)
-
-def sigmoid_f(x):
-    return 1 / (1 + np.exp(-x))
-
-def relu_f(x):
-    return np.maximum(0, x)
-
-def identify_f(x):
-    return x
-
-def softmax(a):
-    c = np.max(a)
-    exp_a = np.exp(c - a)
-    sum_exp_a = np.sum(exp_a)
-    y = exp_a / sum_exp_a
-    return y
+import activation as act_f
 
 ###################################################
 
@@ -37,13 +19,13 @@ def main():
     B3 = np.array([0.1, 0.2])
 
     A1 = np.dot(X, W1) + B1
-    Z1 = relu_f(A1)
+    Z1 = act_f.relu_f(A1)
     A2 = np.dot(Z1, W2) + B2
-    Z2 = relu_f(A2)
+    Z2 = act_f.relu_f(A2)
     A3 = np.dot(Z2, W3) + B3
-    Z3 = identify_f(A3)
+    Z3 = act_f.identify_f(A3)
 
-    y  = softmax(Z3)
+    y  = act_f.softmax(Z3)
 
     print(y)
 
