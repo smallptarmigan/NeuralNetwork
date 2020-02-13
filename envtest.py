@@ -5,7 +5,13 @@ import time
 import numpy as np
 import multiprocessing as mp
 
+import dataset
+import network
 import activation as act_f
+
+###################################################
+
+BATCH_SIZE = 100
 
 ###################################################
 
