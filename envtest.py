@@ -18,6 +18,13 @@ def relu_f(x):
 def identify_f(x):
     return x
 
+def softmax(a):
+    c = np.max(a)
+    exp_a = np.exp(c - a)
+    sum_exp_a = np.sum(exp_a)
+    y = exp_a / sum_exp_a
+    return y
+
 ###################################################
 
 def main():
@@ -36,7 +43,9 @@ def main():
     A3 = np.dot(Z2, W3) + B3
     Z3 = identify_f(A3)
 
-    print(Z3)
+    y  = softmax(Z3)
+
+    print(y)
 
 
 if __name__ == "__main__":
